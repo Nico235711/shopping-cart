@@ -1,12 +1,12 @@
-import { useState, useId } from "react"
-import { formatCurrency } from "../utils/formatCurrency"
+import { useId } from "react"
 import { products as productsCategories } from '../data/products.json'
-import { useShoppingCartContext } from "../hooks/useShoppingCartContext"
+import { useFilterContext } from "../hooks/useFilterContext"
+import { formatCurrency } from "../utils/formatCurrency"
 
 
 export const Filters = () => {
 
-  const { filters, setFilters } = useShoppingCartContext()
+  const { filters, setFilters } = useFilterContext()
   const minPriceFilterId = useId()
   const categoryFilterId = useId()
   const uniqueCategories = () => productsCategories.map(category => category.category)
@@ -39,7 +39,7 @@ export const Filters = () => {
           onChange={handleChangeMinPrice}
           value={filters.minPrice}
         /> 
-        <span className="text-white text-lg font-bold"> - {formatCurrency(filters.minPrice)}</span>
+        <span className="text-white text-lg font-bold">{formatCurrency(filters.minPrice)}</span>
       </div>
       <div className="flex items-center space-x-2">
         <label htmlFor={categoryFilterId} className="text-white text-lg font-bold">Category</label>
