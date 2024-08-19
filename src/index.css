@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilo para el scroll de la clase específica */
+.scroll-bar-aside::-webkit-scrollbar {
+  width: 12px; /* Ancho del scroll */
+}
+
+.scroll-bar-aside::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del track */
+}
+
+.scroll-bar-aside::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 6px; /* Borde redondeado del thumb */
+}
+
+.scroll-bar-aside::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del thumb al pasar el mouse */
+}
