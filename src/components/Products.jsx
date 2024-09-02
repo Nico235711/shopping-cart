@@ -30,6 +30,7 @@ export const Products = () => {
                   <button
                     type="button"
                     className={`${isProductInCart ? "bg-red-600" : "bg-blue-600"} border-2 p-1 rounded-lg text-white`}
+                    aria-label={`${isProductInCart ? "add item to cart" : "remove item from cart"}`}
                     onClick={() => isProductInCart ? removeFromCart(product.id) : addToCart(product)}
                   >
                     {isProductInCart ? <RemoveFromCartIcon /> : <AddToCartIcon />}

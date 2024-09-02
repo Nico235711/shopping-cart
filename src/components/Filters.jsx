@@ -29,7 +29,7 @@ export const Filters = () => {
   return (
     <section className="space-y-2 mt-5">
       <div className="flex items-center space-x-2">
-        <label htmlFor={minPriceFilterId} className="text-white text-lg font-bold">Price</label>
+        <label htmlFor={minPriceFilterId} className="text-[rgb(56 56 56) text-lg font-bold">Price</label>
         <input
           type="range"
           name="price"
@@ -39,14 +39,14 @@ export const Filters = () => {
           onChange={handleChangeMinPrice}
           value={filters.minPrice}
         /> 
-        <span className="text-white text-lg font-bold">{formatCurrency(filters.minPrice)}</span>
+        <span className="text-[rgb(56 56 56) text-lg font-bold">{formatCurrency(filters.minPrice)}</span>
       </div>
       <div className="flex items-center space-x-2">
-        <label htmlFor={categoryFilterId} className="text-white text-lg font-bold">Category</label>
+        <label htmlFor={categoryFilterId} className="text-[rgb(56 56 56) text-lg font-bold">Category</label>
         <select
           name="category"
           id={categoryFilterId}
-          className="w-72 p-2 rounded-lg bg-blue-400 border-2 border-slate-50 text-white"
+          className="w-72 p-2 rounded-lg bg-blue-400 border-2 border-slate-50 text-[rgb(56 56 56)"
           onChange={handleChangeCategory}
         >
           <option value="all">All</option>
